@@ -1,0 +1,12 @@
+.DS_Store
+/.build
+/.swiftpm/config/registries.json
+/.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+/Packages
+/Tests/OnePasswordKnoxTokensTests/.keep
+/*.xcodeproj
+xcuserdata/
+DerivedData/
+/.swiftpm/config/registries.json
+/.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
