@@ -17,9 +17,9 @@ extension Knox.Color {
 	public static let backgroundAccentAttention = SwiftUI.Color("backgroundAccentAttention", bundle: .module)
 	public static let backgroundAccentSuccess = SwiftUI.Color("backgroundAccentSuccess", bundle: .module)
 	public static let backgroundAccentCritical = SwiftUI.Color("backgroundAccentCritical", bundle: .module)
-	public static let backgroundAccentStrongBrand = SwiftUI.Color("backgroundAccentStrongBrand", bundle: .module)
-	public static let backgroundAccentStrongBrandHover = SwiftUI.Color("backgroundAccentStrongBrandHover", bundle: .module)
-	public static let backgroundAccentStrongBrandPressed = SwiftUI.Color("backgroundAccentStrongBrandPressed", bundle: .module)
+	public static let backgroundAccentStrongDefault = SwiftUI.Color("backgroundAccentStrongDefault", bundle: .module)
+	public static let backgroundAccentStrongDefaultHover = SwiftUI.Color("backgroundAccentStrongDefaultHover", bundle: .module)
+	public static let backgroundAccentStrongDefaultPressed = SwiftUI.Color("backgroundAccentStrongDefaultPressed", bundle: .module)
 	public static let backgroundAccentStrongAttention = SwiftUI.Color("backgroundAccentStrongAttention", bundle: .module)
 	public static let backgroundAccentStrongAttentionHover = SwiftUI.Color("backgroundAccentStrongAttentionHover", bundle: .module)
 	public static let backgroundAccentStrongAttentionPressed = SwiftUI.Color("backgroundAccentStrongAttentionPressed", bundle: .module)
@@ -90,9 +90,9 @@ extension Knox.Color {
 		public static let backgroundAccentAttention = UIKit.UIColor(named: "backgroundAccentAttention", in: .module, compatibleWith: nil)!
 		public static let backgroundAccentSuccess = UIKit.UIColor(named: "backgroundAccentSuccess", in: .module, compatibleWith: nil)!
 		public static let backgroundAccentCritical = UIKit.UIColor(named: "backgroundAccentCritical", in: .module, compatibleWith: nil)!
-		public static let backgroundAccentStrongBrand = UIKit.UIColor(named: "backgroundAccentStrongBrand", in: .module, compatibleWith: nil)!
-		public static let backgroundAccentStrongBrandHover = UIKit.UIColor(named: "backgroundAccentStrongBrandHover", in: .module, compatibleWith: nil)!
-		public static let backgroundAccentStrongBrandPressed = UIKit.UIColor(named: "backgroundAccentStrongBrandPressed", in: .module, compatibleWith: nil)!
+		public static let backgroundAccentStrongDefault = UIKit.UIColor(named: "backgroundAccentStrongDefault", in: .module, compatibleWith: nil)!
+		public static let backgroundAccentStrongDefaultHover = UIKit.UIColor(named: "backgroundAccentStrongDefaultHover", in: .module, compatibleWith: nil)!
+		public static let backgroundAccentStrongDefaultPressed = UIKit.UIColor(named: "backgroundAccentStrongDefaultPressed", in: .module, compatibleWith: nil)!
 		public static let backgroundAccentStrongAttention = UIKit.UIColor(named: "backgroundAccentStrongAttention", in: .module, compatibleWith: nil)!
 		public static let backgroundAccentStrongAttentionHover = UIKit.UIColor(named: "backgroundAccentStrongAttentionHover", in: .module, compatibleWith: nil)!
 		public static let backgroundAccentStrongAttentionPressed = UIKit.UIColor(named: "backgroundAccentStrongAttentionPressed", in: .module, compatibleWith: nil)!
@@ -164,9 +164,9 @@ extension Knox.Color {
 		case backgroundAccentAttention = "backgroundAccentAttention"
 		case backgroundAccentSuccess = "backgroundAccentSuccess"
 		case backgroundAccentCritical = "backgroundAccentCritical"
-		case backgroundAccentStrongBrand = "backgroundAccentStrongBrand"
-		case backgroundAccentStrongBrandHover = "backgroundAccentStrongBrandHover"
-		case backgroundAccentStrongBrandPressed = "backgroundAccentStrongBrandPressed"
+		case backgroundAccentStrongDefault = "backgroundAccentStrongDefault"
+		case backgroundAccentStrongDefaultHover = "backgroundAccentStrongDefaultHover"
+		case backgroundAccentStrongDefaultPressed = "backgroundAccentStrongDefaultPressed"
 		case backgroundAccentStrongAttention = "backgroundAccentStrongAttention"
 		case backgroundAccentStrongAttentionHover = "backgroundAccentStrongAttentionHover"
 		case backgroundAccentStrongAttentionPressed = "backgroundAccentStrongAttentionPressed"
@@ -238,9 +238,9 @@ extension Knox.Color {
 		Knox.Color.Name.backgroundAccentAttention : .init(name: "backgroundAccentAttention", path: ["color", "background", "accent", "attention"], sortIndex: 8, value: .color((swiftUiColor: Knox.Color.backgroundAccentAttention, uiKitColor: Knox.Color.UIColor.backgroundAccentAttention))),
 		Knox.Color.Name.backgroundAccentSuccess : .init(name: "backgroundAccentSuccess", path: ["color", "background", "accent", "success"], sortIndex: 9, value: .color((swiftUiColor: Knox.Color.backgroundAccentSuccess, uiKitColor: Knox.Color.UIColor.backgroundAccentSuccess))),
 		Knox.Color.Name.backgroundAccentCritical : .init(name: "backgroundAccentCritical", path: ["color", "background", "accent", "critical"], sortIndex: 10, value: .color((swiftUiColor: Knox.Color.backgroundAccentCritical, uiKitColor: Knox.Color.UIColor.backgroundAccentCritical))),
-		Knox.Color.Name.backgroundAccentStrongBrand : .init(name: "backgroundAccentStrongBrand", path: ["color", "background", "accent", "strong", "brand"], sortIndex: 11, value: .color((swiftUiColor: Knox.Color.backgroundAccentStrongBrand, uiKitColor: Knox.Color.UIColor.backgroundAccentStrongBrand))),
-		Knox.Color.Name.backgroundAccentStrongBrandHover : .init(name: "backgroundAccentStrongBrandHover", path: ["color", "background", "accent", "strong", "brand-hover"], sortIndex: 12, value: .color((swiftUiColor: Knox.Color.backgroundAccentStrongBrandHover, uiKitColor: Knox.Color.UIColor.backgroundAccentStrongBrandHover))),
-		Knox.Color.Name.backgroundAccentStrongBrandPressed : .init(name: "backgroundAccentStrongBrandPressed", path: ["color", "background", "accent", "strong", "brand-pressed"], sortIndex: 13, value: .color((swiftUiColor: Knox.Color.backgroundAccentStrongBrandPressed, uiKitColor: Knox.Color.UIColor.backgroundAccentStrongBrandPressed))),
+		Knox.Color.Name.backgroundAccentStrongDefault : .init(name: "backgroundAccentStrongDefault", path: ["color", "background", "accent", "strong", "default"], sortIndex: 11, value: .color((swiftUiColor: Knox.Color.backgroundAccentStrongDefault, uiKitColor: Knox.Color.UIColor.backgroundAccentStrongDefault))),
+		Knox.Color.Name.backgroundAccentStrongDefaultHover : .init(name: "backgroundAccentStrongDefaultHover", path: ["color", "background", "accent", "strong", "default-hover"], sortIndex: 12, value: .color((swiftUiColor: Knox.Color.backgroundAccentStrongDefaultHover, uiKitColor: Knox.Color.UIColor.backgroundAccentStrongDefaultHover))),
+		Knox.Color.Name.backgroundAccentStrongDefaultPressed : .init(name: "backgroundAccentStrongDefaultPressed", path: ["color", "background", "accent", "strong", "default-pressed"], sortIndex: 13, value: .color((swiftUiColor: Knox.Color.backgroundAccentStrongDefaultPressed, uiKitColor: Knox.Color.UIColor.backgroundAccentStrongDefaultPressed))),
 		Knox.Color.Name.backgroundAccentStrongAttention : .init(name: "backgroundAccentStrongAttention", path: ["color", "background", "accent", "strong", "attention"], sortIndex: 14, value: .color((swiftUiColor: Knox.Color.backgroundAccentStrongAttention, uiKitColor: Knox.Color.UIColor.backgroundAccentStrongAttention))),
 		Knox.Color.Name.backgroundAccentStrongAttentionHover : .init(name: "backgroundAccentStrongAttentionHover", path: ["color", "background", "accent", "strong", "attention-hover"], sortIndex: 15, value: .color((swiftUiColor: Knox.Color.backgroundAccentStrongAttentionHover, uiKitColor: Knox.Color.UIColor.backgroundAccentStrongAttentionHover))),
 		Knox.Color.Name.backgroundAccentStrongAttentionPressed : .init(name: "backgroundAccentStrongAttentionPressed", path: ["color", "background", "accent", "strong", "attention-pressed"], sortIndex: 16, value: .color((swiftUiColor: Knox.Color.backgroundAccentStrongAttentionPressed, uiKitColor: Knox.Color.UIColor.backgroundAccentStrongAttentionPressed))),
