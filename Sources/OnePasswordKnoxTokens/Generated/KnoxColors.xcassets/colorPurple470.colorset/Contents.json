@@ -33,6 +33,18 @@
           "value": "dark"
         }
       ]
+    },
+    {
+      "idiom": "watch",
+      "color": {
+        "color-space": "srgb",
+        "components": {
+          "alpha": "1.0000",
+          "blue": "0.9216",
+          "red": "0.4627",
+          "green": "0.1569"
+        }
+      }
     }
   ]
 }
