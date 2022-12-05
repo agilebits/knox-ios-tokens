@@ -4,7 +4,7 @@
 
 1. In Xcode, open your project and select File > Add Packages… from the main menu.
 2. The Swift Packages window will appear.
-3. In the search field enter the url `http://github.com/agilebits/knox-ios`
+3. In the search field enter the url `https://github.com/agilebits/knox-ios-tokens`
 4. Select your Dependency Rule. This could be a branch, a version, range of version, etc.
 5. At the bottom of the window, make sure your target project is selected in the drop-down menu.
 6. Click Add Package
@@ -20,9 +20,9 @@ In order to work locally on Knox package, you will first need to checkout the pr
 2. In Xcode, open your project and select File > Add Packages… from the main menu.
 3. The Swift Packages window will appear.
 4. Click the Add Local… button.
-5. Select the "knox-ios" folder from your checkout of the private Knox repo. Make sure your project is selected in the "Add to project" menu. Click "Add Package".
+5. Select the "knox-ios-tokens" folder from your checkout of the private Knox repo. Make sure your project is selected in the "Add to project" menu. Click "Add Package".
 
-You should see a Packages > knox-ios section appear near the top of your project in the sidebar. Note: the github version of Knox which is normally located in the "Package Dependencies" section at the bottom of the sidebar will be gone. If you later delete the reference to the local knox-ios package, the Github version will automatically reload and reappear.
+You should see a Packages > knox-ios-tokens section appear near the top of your project in the sidebar. Note: the github version of Knox which is normally located in the "Package Dependencies" section at the bottom of the sidebar will be gone. If you later delete the reference to the local knox-ios-tokens package, the Github version will automatically reload and reappear.
 
 ## Design Tokens
 

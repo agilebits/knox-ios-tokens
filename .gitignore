@@ -3,7 +3,6 @@
 /.swiftpm/config/registries.json
 /.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 /Packages
-/Tests/OnePasswordKnoxTokensTests/.keep
 /*.xcodeproj
 xcuserdata/
 DerivedData/
@@ -12,3 +11,4 @@ DerivedData/
 # !!! ----------- DO NOT EDIT FROM THIS LINE FORWARD. ----------- !!!
 # !!! What’s below is for our publication script alone to handle. !!!
 ops/
+# Tests/OnePasswordKnoxTokensTests/.keep
