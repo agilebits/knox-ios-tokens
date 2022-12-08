@@ -5,9 +5,9 @@ extension Knox {
 }
 
 extension Knox.TypographyLineHeight {
-	public static let default = 0.92
+	public static let default = 1.0
 	public static let headingLarge = 0.96
-	public static let headingXl = 1.0
+	public static let headingXl = 0.92
 }
 
 extension Knox.TypographyLineHeight {
