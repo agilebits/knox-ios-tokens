@@ -110,6 +110,14 @@ extension Knox.Base {
 	public static let size1500 = 60.0
 	public static let size1600 = 64.0
 	public static let size1700 = 128.0
+	public static let size1800 = 256.0
+	public static let size1900 = 512.0
+	public static let size1925 = 576.0
+	public static let size1935 = 600.0
+	public static let size2000 = 768.0
+	public static let size2030 = 840.0
+	public static let size2100 = 1024.0
+	public static let size2200 = 1280.0
 	public static let size10000 = 99999.0
 	public static let fontFamilySansSerif = "Inter V"
 	public static let fontFamilyMonospace = "iA Writer Mono V"
@@ -322,6 +330,14 @@ extension Knox.Base {
 		case size1500 = "size1500"
 		case size1600 = "size1600"
 		case size1700 = "size1700"
+		case size1800 = "size1800"
+		case size1900 = "size1900"
+		case size1925 = "size1925"
+		case size1935 = "size1935"
+		case size2000 = "size2000"
+		case size2030 = "size2030"
+		case size2100 = "size2100"
+		case size2200 = "size2200"
 		case size10000 = "size10000"
 		case fontFamilySansSerif = "fontFamilySansSerif"
 		case fontFamilyMonospace = "fontFamilyMonospace"
@@ -446,20 +462,28 @@ extension Knox.Base {
 		Knox.Base.Name.size1500 : .init(name: "size1500", path: ["base", "size", "1500"], sortIndex: 101, value: .double(Knox.Base.size1500)),
 		Knox.Base.Name.size1600 : .init(name: "size1600", path: ["base", "size", "1600"], sortIndex: 102, value: .double(Knox.Base.size1600)),
 		Knox.Base.Name.size1700 : .init(name: "size1700", path: ["base", "size", "1700"], sortIndex: 103, value: .double(Knox.Base.size1700)),
-		Knox.Base.Name.size10000 : .init(name: "size10000", path: ["base", "size", "10000"], sortIndex: 104, value: .double(Knox.Base.size10000)),
-		Knox.Base.Name.fontFamilySansSerif : .init(name: "fontFamilySansSerif", path: ["base", "font", "family", "sans-serif"], sortIndex: 105, value: .string(Knox.Base.fontFamilySansSerif)),
-		Knox.Base.Name.fontFamilyMonospace : .init(name: "fontFamilyMonospace", path: ["base", "font", "family", "monospace"], sortIndex: 106, value: .string(Knox.Base.fontFamilyMonospace)),
-		Knox.Base.Name.fontWeight400 : .init(name: "fontWeight400", path: ["base", "font", "weight", "400"], sortIndex: 107, value: .integer(Knox.Base.fontWeight400)),
-		Knox.Base.Name.fontWeight500 : .init(name: "fontWeight500", path: ["base", "font", "weight", "500"], sortIndex: 108, value: .integer(Knox.Base.fontWeight500)),
-		Knox.Base.Name.fontWeight600 : .init(name: "fontWeight600", path: ["base", "font", "weight", "600"], sortIndex: 109, value: .integer(Knox.Base.fontWeight600)),
-		Knox.Base.Name.letterSpacing100 : .init(name: "letterSpacing100", path: ["base", "letter-spacing", "100"], sortIndex: 110, value: .double(Knox.Base.letterSpacing100)),
-		Knox.Base.Name.letterSpacing200 : .init(name: "letterSpacing200", path: ["base", "letter-spacing", "200"], sortIndex: 111, value: .double(Knox.Base.letterSpacing200)),
-		Knox.Base.Name.letterSpacing300 : .init(name: "letterSpacing300", path: ["base", "letter-spacing", "300"], sortIndex: 112, value: .double(Knox.Base.letterSpacing300)),
-		Knox.Base.Name.letterSpacing400 : .init(name: "letterSpacing400", path: ["base", "letter-spacing", "400"], sortIndex: 113, value: .double(Knox.Base.letterSpacing400)),
-		Knox.Base.Name.letterSpacing500 : .init(name: "letterSpacing500", path: ["base", "letter-spacing", "500"], sortIndex: 114, value: .double(Knox.Base.letterSpacing500)),
-		Knox.Base.Name.letterSpacing600 : .init(name: "letterSpacing600", path: ["base", "letter-spacing", "600"], sortIndex: 115, value: .double(Knox.Base.letterSpacing600)),
-		Knox.Base.Name.lineHeight100 : .init(name: "lineHeight100", path: ["base", "line-height", "100"], sortIndex: 116, value: .double(Knox.Base.lineHeight100)),
-		Knox.Base.Name.lineHeight200 : .init(name: "lineHeight200", path: ["base", "line-height", "200"], sortIndex: 117, value: .double(Knox.Base.lineHeight200)),
-		Knox.Base.Name.lineHeight300 : .init(name: "lineHeight300", path: ["base", "line-height", "300"], sortIndex: 118, value: .double(Knox.Base.lineHeight300))
+		Knox.Base.Name.size1800 : .init(name: "size1800", path: ["base", "size", "1800"], sortIndex: 104, value: .double(Knox.Base.size1800)),
+		Knox.Base.Name.size1900 : .init(name: "size1900", path: ["base", "size", "1900"], sortIndex: 105, value: .double(Knox.Base.size1900)),
+		Knox.Base.Name.size1925 : .init(name: "size1925", path: ["base", "size", "1925"], sortIndex: 106, value: .double(Knox.Base.size1925)),
+		Knox.Base.Name.size1935 : .init(name: "size1935", path: ["base", "size", "1935"], sortIndex: 107, value: .double(Knox.Base.size1935)),
+		Knox.Base.Name.size2000 : .init(name: "size2000", path: ["base", "size", "2000"], sortIndex: 108, value: .double(Knox.Base.size2000)),
+		Knox.Base.Name.size2030 : .init(name: "size2030", path: ["base", "size", "2030"], sortIndex: 109, value: .double(Knox.Base.size2030)),
+		Knox.Base.Name.size2100 : .init(name: "size2100", path: ["base", "size", "2100"], sortIndex: 110, value: .double(Knox.Base.size2100)),
+		Knox.Base.Name.size2200 : .init(name: "size2200", path: ["base", "size", "2200"], sortIndex: 111, value: .double(Knox.Base.size2200)),
+		Knox.Base.Name.size10000 : .init(name: "size10000", path: ["base", "size", "10000"], sortIndex: 112, value: .double(Knox.Base.size10000)),
+		Knox.Base.Name.fontFamilySansSerif : .init(name: "fontFamilySansSerif", path: ["base", "font", "family", "sans-serif"], sortIndex: 113, value: .string(Knox.Base.fontFamilySansSerif)),
+		Knox.Base.Name.fontFamilyMonospace : .init(name: "fontFamilyMonospace", path: ["base", "font", "family", "monospace"], sortIndex: 114, value: .string(Knox.Base.fontFamilyMonospace)),
+		Knox.Base.Name.fontWeight400 : .init(name: "fontWeight400", path: ["base", "font", "weight", "400"], sortIndex: 115, value: .integer(Knox.Base.fontWeight400)),
+		Knox.Base.Name.fontWeight500 : .init(name: "fontWeight500", path: ["base", "font", "weight", "500"], sortIndex: 116, value: .integer(Knox.Base.fontWeight500)),
+		Knox.Base.Name.fontWeight600 : .init(name: "fontWeight600", path: ["base", "font", "weight", "600"], sortIndex: 117, value: .integer(Knox.Base.fontWeight600)),
+		Knox.Base.Name.letterSpacing100 : .init(name: "letterSpacing100", path: ["base", "letter-spacing", "100"], sortIndex: 118, value: .double(Knox.Base.letterSpacing100)),
+		Knox.Base.Name.letterSpacing200 : .init(name: "letterSpacing200", path: ["base", "letter-spacing", "200"], sortIndex: 119, value: .double(Knox.Base.letterSpacing200)),
+		Knox.Base.Name.letterSpacing300 : .init(name: "letterSpacing300", path: ["base", "letter-spacing", "300"], sortIndex: 120, value: .double(Knox.Base.letterSpacing300)),
+		Knox.Base.Name.letterSpacing400 : .init(name: "letterSpacing400", path: ["base", "letter-spacing", "400"], sortIndex: 121, value: .double(Knox.Base.letterSpacing400)),
+		Knox.Base.Name.letterSpacing500 : .init(name: "letterSpacing500", path: ["base", "letter-spacing", "500"], sortIndex: 122, value: .double(Knox.Base.letterSpacing500)),
+		Knox.Base.Name.letterSpacing600 : .init(name: "letterSpacing600", path: ["base", "letter-spacing", "600"], sortIndex: 123, value: .double(Knox.Base.letterSpacing600)),
+		Knox.Base.Name.lineHeight100 : .init(name: "lineHeight100", path: ["base", "line-height", "100"], sortIndex: 124, value: .double(Knox.Base.lineHeight100)),
+		Knox.Base.Name.lineHeight200 : .init(name: "lineHeight200", path: ["base", "line-height", "200"], sortIndex: 125, value: .double(Knox.Base.lineHeight200)),
+		Knox.Base.Name.lineHeight300 : .init(name: "lineHeight300", path: ["base", "line-height", "300"], sortIndex: 126, value: .double(Knox.Base.lineHeight300))
 	]
 }

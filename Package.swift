@@ -6,17 +6,16 @@ import PackageDescription
 let package = Package(
 	name: "OnePasswordKnoxTokens",
 	platforms: [
-	   .iOS(.v15),
+		.iOS(.v15),
 	],
 	products: [
 		.library(
 			name: "OnePasswordKnoxTokens",
-			targets: ["OnePasswordKnoxTokens"])
+			targets: ["OnePasswordKnoxTokens"]),
 	],
 	dependencies: [],
 	targets: [
 		.target(
 			name: "OnePasswordKnoxTokens",
-			dependencies: [])
-	]
-)
+			dependencies: []),
+	])
