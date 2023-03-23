@@ -45,55 +45,61 @@ We include both base and alias tokens in this Swift package. Normally you will w
 Tokens are contained within a hierarchy. At the top of the hierarchy is the Knox struct. The various different types of tokens are defined as inner structs inside the Knox struct.
 
     Knox
-     |- Knox.Base
-    	 |- Knox.Base.UIColor
-    	 |- Knox.Base.Name
+     |- Knox.BackgroundColor
+     |- Knox.BorderColor
      |- Knox.CornerRadius
-    	 |- Knox.CornerRadius.Name
      |- ...
 
-Each token type has a struct inside Knox: Knox.Base, Knox.CornerRadius, Knox.Color, Knox.Spacing, etc.
+Each token type has a struct inside Knox: Knox.Base, Knox.CornerRadius, Knox.TextColor, Knox.Spacing, etc.
 
-Within each token type struct, tokens are defined as 'public static let' constants. There is also an inner enum called Name, and a dictionary named allTokens which contains metadata about the tokens.
+Within each token type struct, tokens are defined as 'public static let' constants of the token type. For example: Knox.CornerRadius.medium, Knox.CornerRadius.large, etc...
+
+Each token type implements one of the protocols: KnoxColorToken, KnoxFloatToken, KnoxIntToken, or KnoxStringToken. These protocols in turn implement the KnoxToken protocol.
+
+These token protocols are defined in KnoxToken.swift.
+
+You can access information about the token through these protocols, but mostly you will want to access the value. For KnoxColorTokens, the value is .color and .uiColor. For all other tokens the value is .value.
 
 Examples:
 
 To access the token for a medium corner radius you can use code like this:
 
 ```swift
-RoundedRectangle(cornerRadius: Knox.CornerRadius.medium)
+RoundedRectangle(cornerRadius: Knox.CornerRadius.medium.value)
 ```
 
 To access a Color you can do something like this:
 
 ```swift
-RoundedRectangle(cornerRadius: Knox.CornerRadius.medium)
-	.fill(Knox.Color.backgroundAccentStrongCritical)
+RoundedRectangle(cornerRadius: Knox.CornerRadius.medium.value)
+	.fill(Knox.BackgroundColor.accentStrongCritical.color)
 ```
 
 ### Colors
 
 Colors are special on iOS because we have to work with `Color` in SwiftUI and `UIColor` in UIKit.
-All the Knox colors are defined in an asset catalog `KnoxColors.xcassets`. Then, for convenience, every color in the catalog is defined as a `static let` color value. SwiftUI colors are found in the `Knox.Colors` struct. UIKit colors are found in the `Knox.Colors.UIColor` struct. The same pattern is used for base token colors in `Knox.Base` and `Knox.Base.UIColor`.
+All the Knox colors are defined in an asset catalog `KnoxColors.xcassets`. Then, for convenience, every color in the catalog is defined as a `static let` color token value on the use-type of color (e.g. Knox.BackgroundColor).
 
-If for some reason you need to access the color directly from the asset catalog, color names can be found in the `Knox.Color.Name` enumeration.
+You can access the SwiftUI color from with .color accessor on KnoxColorToken. You can access the UIKit color with the .uiColor accessor on KnoxColorToken.
+
+If for some reason you need to access the color directly from the asset catalog, color names can be found in the .assetName accessor on KnoxColorToken. This string matches the name inside the asset catalog.
 
 SwiftUI example:
 
 ```swift
-Text(“Foo”).foregroundColor(Knox.Color.textNeutralDefault)
+Text(“Foo”).foregroundColor(Knox.TextColor.neutralDefault.color)
 ```
 
 UIKit example:
 
 ```swift
-myContentView.backgroundColor = Knox.Color.backgroundAccentSuccess
+myContentView.backgroundColor = Knox.BackgroundColor.accentSuccess.uiColor
 ```
 
 Asset catalog example:
 
 ```swift
-Color(Knox.Base.Name.colorBlue200.rawValue, bundle: Knox.bundle)
+Color(Knox.BackgroundColor.accentStrongAttentionPressed.assetName, bundle: Knox.bundle)
 ```
 
 ### Corner Radius
@@ -101,7 +107,7 @@ Color(Knox.Base.Name.colorBlue200.rawValue, bundle: Knox.bundle)
 Corner Radius tokens are used to specify the corner radius of rounded rectangles. In SwiftUI you might use these like this:
 
 ```swift
-RoundedRectangle(cornerRadius: Knox.CornerRadius.medium)
+RoundedRectangle(cornerRadius: Knox.CornerRadius.medium.value)
 ```
 
 The `.circular` corner radius is defined as `99999.0`, and it behaves differently depending on how the UI toolkit interprets this large value. In SwiftUI, `.circular` makes a pill-shape where the short sides of a rectangle are rounded into half circles. Only if the rectangle is a square will the resulting shape will be an actual circle.
@@ -111,7 +117,7 @@ The `.circular` corner radius is defined as `99999.0`, and it behaves differentl
 Spacing tokens are used to create space within a component or between components. They can be used horizontally or vertically. In SwiftUI a spacing token might look like this:
 
 ```swift
-HStack(spacing: Knox.Spacing.hairline) {
+HStack(spacing: Knox.Spacing.hairline.value) {
 	stackContent
 }
 ```
@@ -119,15 +125,15 @@ HStack(spacing: Knox.Spacing.hairline) {
 or if a specific spacing is needed:
 
 ```swift
-Spacer().frame(height: Knox.Spacing.large)
+Spacer().frame(height: Knox.Spacing.large.value)
 ```
 
 For the initial version of Knox, spacing tokens have non-uniform names. You may encounter small, medium, large, but also xl, xs, and spacing2xl. These naming inconsistencies will be addressed in a future update.
 
 ### Typography
 
-Typography tokens are limited to low-level definitions. In `Knox.TypographyFont` there are values for font families, weights, and sizes. Letter spacing and line height values are defined in `Knox.TypographyLetterSpacing` and `Knox.TypographyLineHeight` respectively.
+Typography tokens are limited to low-level definitions. For example, in `Knox.TypographyFontWeight` there are tokens containing CSS font weight values. These are not meant to be used directly, but rather through the Typography component in the OnePasswordKnoxComponents swift package.
 
-### Metadata
+### Use in Components
 
-Each token type includes a special value named `allTokens`. This is a dictionary in which the keys are the token `Name` enum cases, and the values are structs of type `Knox.TokenMetadata`. You can view the metadata definition in `Metadata.swift`. The primary purpose of this metadata information is to aid in creating Storybook.app style showcases for the tokens. You can see this in action by viewing the Knox views in the Storybook-iOS target in the 1Password core repository.
+Though all of these tokens are available to use directly, many of are intended be used as parameters to Components in the OnePasswordKnoxComponents swift package. This is why breaking the tokens into separate types is valuable. With strong typing, we can support better code completion and simpler interfaces when using Knox Components. For example the Knox Typography components expects text color to be a Knox.TextColor and not a Knox.IconColor.

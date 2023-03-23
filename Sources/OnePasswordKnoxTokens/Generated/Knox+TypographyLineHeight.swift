@@ -1,27 +1,19 @@
 import Foundation
 
 extension Knox {
-	public struct TypographyLineHeight {}
-}
+	public struct TypographyLineHeight: KnoxFloatToken, CaseIterable {
+		public static let `default` = TypographyLineHeight(name: "`default`", path: ["line-height", "default"], value: 1.0)
+		public static let headingLarge = TypographyLineHeight(name: "headingLarge", path: ["line-height", "heading", "large"], value: 0.96)
+		public static let headingXl = TypographyLineHeight(name: "headingXl", path: ["line-height", "heading", "xl"], value: 0.92)
 
-extension Knox.TypographyLineHeight {
-	public static let `default` = 1.0
-	public static let headingLarge = 0.96
-	public static let headingXl = 0.92
-}
+		public let name: String
+		public let path: [String]
+		public let value: CGFloat
 
-extension Knox.TypographyLineHeight {
-	public enum Name: String {
-		case `default` = "default"
-		case headingLarge = "headingLarge"
-		case headingXl = "headingXl"
+		public static let allCases: Self.AllCases = [
+			.default,
+			.headingLarge,
+			.headingXl
+		]
 	}
-}
-
-extension Knox.TypographyLineHeight {
-	public static let allTokens: [Knox.TypographyLineHeight.Name : Knox.TokenMetadata] = [
-		Knox.TypographyLineHeight.Name.`default` : .init(name: "default", path: ["line-height", "default"], sortIndex: 0, value: .double(Knox.TypographyLineHeight.`default`)),
-		Knox.TypographyLineHeight.Name.headingLarge : .init(name: "headingLarge", path: ["line-height", "heading", "large"], sortIndex: 1, value: .double(Knox.TypographyLineHeight.headingLarge)),
-		Knox.TypographyLineHeight.Name.headingXl : .init(name: "headingXl", path: ["line-height", "heading", "xl"], sortIndex: 2, value: .double(Knox.TypographyLineHeight.headingXl))
-	]
 }
